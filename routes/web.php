@@ -10,7 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//
+Route::get('test',function(){
+  $test = App\Helpers\Helper::Generalphototopics(14)->get();
+  // $Setting = App\Setting::find(1);
+  dd($test);
+  return $Setting;
+});
 
 // Language Route
 Route::post('/lang', array(

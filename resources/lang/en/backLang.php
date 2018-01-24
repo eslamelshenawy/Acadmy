@@ -65,6 +65,11 @@ return [
     'prices' => 'Price',
     'hours' => 'hours',
     'week' => 'Weeks',
+    'events' => 'Events',
+    'Slider' => 'Slider',
+    'boxes1' => 'text boxes',
+    'boxes2' => 'text boxes',
+    'boxes2' => 'text boxes',
 
     // General
     'logout' => 'Logout',

@@ -307,7 +307,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             @endif
                         @endif
                     @endforeach
-                  
+
 
 
                     @if(Helper::GeneralWebmasterSettings("banners_status"))
@@ -316,14 +316,14 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             $currentFolder = "banners"; // Put folder name here
                             $PathCurrentFolder = substr($urlAfterRoot, 0, strlen($currentFolder));
                             ?>
-                            <li {{ ($PathCurrentFolder==$currentFolder) ? 'class=active' : '' }} >
+                            <!-- <li {{ ($PathCurrentFolder==$currentFolder) ? 'class=active' : '' }} >
                                 <a href="{{ route('Banners') }}">
 <span class="nav-icon">
 <i class="material-icons">&#xe433;</i>
 </span>
                                     <span class="nav-text">{{ trans('backLang.adsBanners') }}</span>
                                 </a>
-                            </li>
+                            </li> -->
                         @endif
                     @endif
 
@@ -427,11 +427,11 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                                 $PathCurrentSubFolder = substr($urlAfterRoot, (strlen($currentFolder) + 1),
                                     strlen($currentSubFolder));
                                 ?>
-                                <li {{ ($PathCurrentSubFolder==$currentSubFolder) ? 'class=active' : '' }}>
+                                <!-- <li {{ ($PathCurrentSubFolder==$currentSubFolder) ? 'class=active' : '' }}>
                                     <a href="{{ route('WebmasterBanners') }}">
                                         <span class="nav-text">{{ trans('backLang.adsBannersSettings') }}</span>
                                     </a>
-                                </li>
+                                </li> -->
 
                                 <?php
                                 $currentSubFolder = "translations"; // Put folder name here

@@ -33,7 +33,7 @@ if (Helper::GeneralSiteSettings("style_type")) {
             <!-- end header -->
 
     <!-- Content Section -->
-    
+         @yield('content')
             <!-- end of Content Section -->
 
     <!-- start footer -->

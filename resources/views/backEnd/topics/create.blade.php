@@ -187,6 +187,8 @@
                       </div>
                   </div>
                 @endif
+              
+
                 @if($WebmasterSection->year =="1")
                   <div class="form-group">
                       <label for="select_year " class="col-sm-2">{{trans('backLang.select_year') }}</label>

@@ -32,6 +32,20 @@ class Helper
         return $Setting->$var;
     }
 
+//Get information about website
+    static function GeneralSiteSetting($var)
+    {
+        $Setting = Setting::find(1);
+        return $Setting;
+    }
+
+    //Get photo of silider
+        static function Generalphototopics($var)
+        {
+            $Setting = Topic::where('webmaster_id','=','14');
+            return $Setting;
+        }
+
     // Get Events Alerts
     static function eventsAlerts()
     {
