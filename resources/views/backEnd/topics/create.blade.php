@@ -187,7 +187,25 @@
                       </div>
                   </div>
                 @endif
-              
+                @if($WebmasterSection->say =="1")
+                <div class="form-group row">
+                    <label for="arabic_name"
+                           class="col-sm-2 form-control-label">{{trans('backLang.arabic_name') }}
+                    </label>
+                    <div class="col-sm-10">
+                      <input placeholder="{{trans('backLang.arabic_name') }}" class="form-control"  required="" dir="ltr" name="name_ar" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="english_name"
+                           class="col-sm-2 form-control-label">{{trans('backLang.english_name') }}
+                    </label>
+                    <div class="col-sm-10">
+                      <input placeholder="{{trans('backLang.english_name') }}" class="form-control"  required="" dir="ltr" name="name_en" type="text" value="">
+                    </div>
+                </div>
+              @endif
+
 
                 @if($WebmasterSection->year =="1")
                   <div class="form-group">

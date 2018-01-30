@@ -181,6 +181,8 @@ class TopicsController extends Controller
 
             $Topic->details_ar = $request->details_ar;
             $Topic->details_en = $request->details_en;
+            $Topic->name_ar = $request->name_ar;
+            $Topic->name_en = $request->name_en;
             $Topic->date = $request->date;
             if (@$request->expire_date != "") {
                 $Topic->expire_date = $request->expire_date;
@@ -428,6 +430,8 @@ class TopicsController extends Controller
                 $Topic->title_en = $request->title_en;
                 $Topic->details_ar = $request->details_ar;
                 $Topic->details_en = $request->details_en;
+                $Topic->name_ar = $request->name_ar;
+                $Topic->name_en = $request->name_en;
                 $Topic->date = $request->date;
                 if (@$request->expire_date != "" || $Topic->date != "") {
                     $Topic->expire_date = @$request->expire_date;

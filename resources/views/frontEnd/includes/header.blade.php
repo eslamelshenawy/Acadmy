@@ -37,11 +37,11 @@
                         <ul class="list-inline">
                             <li>
                                 <a href="#" data-toggle="modal" data-target="#login-Modal">
-                                <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                                <span class="glyphicon glyphicon-log-in"></span> {{trans('backLang.Login')}}</a>
                             </li>
                             <li>
                                 <a href="#" data-toggle="modal" data-target="#register-Modal">
-                                <span class="glyphicon glyphicon-log-in"></span> Register </a>
+                                <span class="glyphicon glyphicon-log-in"></span> {{trans('backLang.Register')}} </a>
                             </li>
                         </ul>
 
@@ -76,18 +76,18 @@
                         <div class="collapse navbar-collapse" id="myNavbar">
                           <ul class="nav navbar-nav">
                             <li class="active"><a href="{{url('/')}}">{{trans('backLang.home')}}</a></li>
-                            <li><a href="courses.php">Courses</a></li>
-                            <li><a href="scholarships.php">Scholarships</a></li>
-                            <li><a href="portfolio.php">Portfolio</a></li>
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="contact.php">Contact Us</a></li>
-                            <li><a href="blog.php">Blog</a></li>
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Other Pages <span class="caret"></span></a>
+                            <li><a href="courses.php">{{trans('backLang.Courses')}}</a></li>
+                            <li><a href="scholarships.php">{{trans('backLang.Scholarships')}}</a></li>
+                            <li><a href="portfolio.php">{{trans('backLang.Portfolio')}}</a></li>
+                            <li><a href="about.php">{{trans('backLang.About_Us')}}</a></li>
+                            <li><a href="contact.php">{{trans('backLang.Contact_Us')}}</a></li>
+                            <li><a href="blog.php">{{trans('backLang.Blog')}}</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">{{trans('backLang.Other_Pages')}}  <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                  <li><a href="content_details.php"> Content Details</a></li>
-                                  <li><a href="event_details.php"> Event Details </a></li>
-                                  <li><a href="teacher_profile.php"> Teacher Profile </a></li>
-                                  <li><a href="student_profile.php"> Student Profile </a></li>
+                                  <li><a href="content_details.php">{{trans('backLang.Content_Details')}} </a></li>
+                                  <li><a href="event_details.php">{{trans('backLang.Event_Details')}}</a></li>
+                                  <li><a href="teacher_profile.php">{{trans('backLang.Teacher_Profile')}}</a></li>
+                                  <li><a href="student_profile.php">{{trans('backLang.Student_Profile')}}</a></li>
                                 </ul>
                             </li>
                           </ul>

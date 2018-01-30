@@ -12,7 +12,8 @@
 */
 //
 Route::get('test',function(){
-  $test = App\Helpers\Helper::Generalphototopics(14)->get();
+ $dt = Carbon\Carbon::now();
+  $test = App\Topic::where('webmaster_id','=','13')->where('expire_date','>=',$dt)->get();
   // $Setting = App\Setting::find(1);
   dd($test);
   return $Setting;

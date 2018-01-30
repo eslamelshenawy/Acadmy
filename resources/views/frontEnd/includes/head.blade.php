@@ -12,10 +12,8 @@
         <!-- Bootstrap RTL -->
 
 				@if(App::getLocale()=="ar")
-
-        <link rel="stylesheet" href="{{url('public')}}/frontEnd/En/css/bootstrap-rtl.css">
+        <link rel="stylesheet" href="{{url('public')}}/frontEnd/AR/css/bootstrap-rtl.css">
 				@else
-
 				@endif
 
 
@@ -38,6 +36,9 @@
         <link href="{{url('public')}}/frontEnd/En/css/editor.css" rel="stylesheet">
         <!-- Colorbox => In videos Page -->
         <link href="{{url('public')}}/frontEnd/En/css/popup/colorbox.css" rel="stylesheet">
-
-        <link rel="stylesheet" href="{{url('public')}}/frontEnd/En/css/style.css" type="text/css"/>
+				@if(App::getLocale()=="ar")
+				<link rel="stylesheet" href="{{url('public')}}/frontEnd/AR/css/style.css" type="text/css"/>
+				@else
+				<link rel="stylesheet" href="{{url('public')}}/frontEnd/En/css/style.css" type="text/css"/>
+				@endif
 <!--		<script src="js/html5shiv.min.js"></script>		-->

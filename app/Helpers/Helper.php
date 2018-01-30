@@ -15,7 +15,7 @@ use App\Webmail;
 use App\WebmasterSection;
 use App\WebmasterSetting;
 use Auth;
-
+use Carbon\Carbon;
 class Helper
 {
 
@@ -31,6 +31,14 @@ class Helper
         $Setting = Setting::find(1);
         return $Setting->$var;
     }
+//Get events
+static function Generalevents($var)
+{
+    $dt = Carbon::now();
+    $Setting = Topic::where('webmaster_id','=','13')->where('expire_date','>=',$dt)->get();
+    return $Setting;$dt;
+}
+
 
 //Get information about website
     static function GeneralSiteSetting($var)
@@ -38,6 +46,24 @@ class Helper
         $Setting = Setting::find(1);
         return $Setting;
     }
+    //Get photo of vadios
+        static function Generalprotofilevadios($var)
+        {
+            $Setting = Topic::where('webmaster_id','=','5');
+            return $Setting;
+        }
+    //Get photo of books
+        static function Generalprotofilebook($var)
+        {
+            $Setting = Topic::where('webmaster_id','=','11');
+            return $Setting;
+        }
+    //Get photo of protofile
+        static function Generalprotofile($var)
+        {
+            $Setting = Topic::where('webmaster_id','=','4');
+            return $Setting;
+        }
 
     //Get photo of silider
         static function Generalphototopics($var)
@@ -46,6 +72,26 @@ class Helper
             return $Setting;
         }
 
+        //Get text boxes1
+            static function Generaltext1topics($var)
+            {
+                $Setting = Topic::where('webmaster_id','=','15');
+                return $Setting;
+            }
+
+            //Get text boxes2
+                    static function Generaltext2topics($var)
+                {
+                        $Setting = Topic::where('webmaster_id','=','16');
+                        return $Setting;
+                }
+
+            //Get text boxes3
+                    static function Generaltext3topics($var)
+                {
+                        $Setting = Topic::where('webmaster_id','=','17');
+                        return $Setting;
+                }
     // Get Events Alerts
     static function eventsAlerts()
     {

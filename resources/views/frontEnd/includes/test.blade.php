@@ -1,241 +1,268 @@
-<?php
-  $tests = App\Helpers\Helper::GeneralSiteSetting(1)->get();
+<script src="{{url('public')}}/frontEnd/En/js/jquery-1.11.3.min.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/bootstrap.min.js"></script>
+<!--Script Navbar fixed : START-->
+<script>
+$(window).scroll(function() {
+    if($(this).scrollTop()>100) {
+        $( ".navbar-me" ).addClass("fixed-me");
+    } else {
+        $( ".navbar-me" ).removeClass("fixed-me");
+    }
+});
+</script>
+<!--Script Navbar fixed : END-->
+<!--  Slider = " Home Page "  START  -->
+<script src="{{url('public')}}/frontEnd/En/js/lightslider.js"></script>
+<script> // Frist slider
+     $(document).ready(function() {
+        $("#content-slider_main_slider").lightSlider({
+            loop:true,
+            item:1,
+            auto: true,
+            keyPress:true,
+            speed:900,
+            pause:6000,
+            pager: false,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                        item:1,
+                        slideMove:1,
+                        slideMargin:6,
+                      }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        item:1,
+                        slideMove:1
+                      }
+                }
+            ]
+        });
 
- ?>
-<header>
-    <section class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                @foreach($tests as $test)
-                <div class="col-md-2 col-sm-4 col-xs-12 hidden-xs">
-                    <div class="info_blocks">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                      <h5>{{$test->contact_t6}}</h5>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-12 hidden-xs">
-                    <div class="info_blocks">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                      <h5>{{$test->contact_t3}}</h5>
-                    </div>
-                </div>
-                @endforeach
-                <div class="col-md-2 col-sm-4 col-xs-12">
-                  @if(App::getLocale()=="ar")
-                    <a href="{{ URL::to('lang/en') }}" class="select-lang"> عربى </a>
-                    @else
-                  <a href="{{ URL::to('lang/ar') }}" class="select-lang"> EN </a>
-                    @endif
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 hidden-xs">
-                    <div class=" login-sign">
-                        <ul class="list-inline">
-                          <li>
-                                <a href="#" data-toggle="modal" data-target="#login-Modal">
-                                <span class="glyphicon glyphicon-log-in"></span> Login</a>
-                            </li>
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#register-Modal">
-                                <span class="glyphicon glyphicon-log-in"></span> Register </a>
-                            </li>
-                        </ul>
+    });
+</script>
 
-                    </div>
-                </div>
-            </div>
-         </div>
-    </section>
-    <section class="header navbar-me">
-     <div class="container">
-         <div class="row ">
-             <div class="col-md-2 col-sm-12 col-xs-12">
-                 <div class="logoImg">
-                     <a class="" href="index.php"><img src="{{url('public')}}/frontEnd/En/img/logo-1.png" alt=""></a>
-                 </div>
-                 <div class="logoImg_fixed hidden-xs hidden-sm">
-                     <a class="" href="index.php"><img src="{{url('public')}}/frontEnd/En/img/logo2.png" alt=""></a>
-                 </div>
-             </div>
-             <div class="col-md-10 col-sm-12 col-xs-12">
-                <nav class="navbar navbar-inverse " role="navigation">
-                    <div class="logoImg_fixed logo-xs hidden-lg hidden-md">
-                     <a class="" href="index.php"><img src="{{url('public')}}/frontEnd/En/img/logo2.png" alt=""></a>
-                    </div>
-                     <div class="navbar-header">
-                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                         <span class="icon-bar"></span>
-                         <span class="icon-bar"></span>
-                         <span class="icon-bar"></span>
-                       </button>
-                     </div>
-                     <div class="collapse navbar-collapse" id="myNavbar">
-                       <ul class="nav navbar-nav">
-                         <li class="active"><a href="index.php">Home</a></li>
-                         <li><a href="courses.php">Courses</a></li>
-                         <li><a href="scholarships.php">Scholarships</a></li>
-                         <li><a href="portfolio.php">Portfolio</a></li>
-                         <li><a href="about.php">About Us</a></li>
-                         <li><a href="contact.php">Contact Us</a></li>
-                         <li><a href="blog.php">Blog</a></li>
-                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Other Pages <span class="caret"></span></a>
-                             <ul class="dropdown-menu">
-                               <li><a href="content_details.php"> Content Details</a></li>
-                               <li><a href="event_details.php"> Event Details </a></li>
-                               <li><a href="teacher_profile.php"> Teacher Profile </a></li>
-                               <li><a href="student_profile.php"> Student Profile </a></li>
-                             </ul>
-                         </li>
-                       </ul>
-                     </div>
-                 </nav>
-             </div>
-         </div>
-      </div>
- </section>
-</header>
+<script> // Events slider
+     $(document).ready(function() {
+        $("#content-slider_events_slider").lightSlider({
+            loop:true,
+            item:3,
+            keyPress:true,
+            controls:false,
+            pager: false,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                        item:1,
+                        slideMove:1,
+                        slideMargin:6,
+                      }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        item:1,
+                        slideMove:1
+                      }
+                }
+            ]
+        });
 
-<!--  Social Media List START  -->
-<div class="social_media_list">
- <ul>
-     <li class="facebook">
-         <a target="_blank" href="#" class="fb"><i class="fa fa-facebook "></i></a>
-     </li>
-     <li class="twitter">
-         <a target="_blank" href="#" class="tw"><i class="fa fa-twitter "></i></a>
-     </li>
-     <li class="google-plus">
-         <a target="_blank" href="#" class="gb"><i class="fa fa-google-plus "></i></a>
-     </li>
-     <li class="linkedin">
-         <a target="_blank" href="#" class="in"><i class="fa fa-linkedin "></i></a>
-     </li>
-     <li class="youtube cboxElement">
-         <a target="_blank" href="#" class="ytube"><i class="fa fa-youtube-play "></i></a>
-     </li>
- </ul>
-</div>
-<!--  Social Media List END  -->
+    });
+</script>
+<!--  Slider = " Home Page "  START  -->
 
-<!-- Login-Modal -->
-<div class="modal fade" id="login-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
- <div class="modal-content">
-   <div class="modal-header">
-     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     <h4 class="modal-title" id="myModalLabel"> Login </h4>
-   </div>
-   <div class="modal-body">
-     <div class="row">
-         <div class="col-md-12">
-                 <div class="all_form sign-register-form">
-                     <div class="row">
-                         <div class="col-md-2">
-                             <div class="form-01 register_form-01">
-                                 <div class="dropdown" id="menu">
-                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{url('public')}}/frontEnd/En/img/flag02.png" class="img-responsive img-flag" alt=""/><span class="caret"></span></a>
-                                     <ul class="dropdown-menu">
-                                       <li>
-                                           <a href="#">
-                                             <img src="{{url('public')}}/frontEnd/En/img/flag01.png" class="img-responsive img-flag" alt=""/>
-                                           </a>
-                                       </li>
-                                       <li>
-                                           <a href="#">
-                                             <img src="{{url('public')}}/frontEnd/En/img/flag02.png" class="img-responsive img-flag" alt=""/>
-                                           </a>
-                                       </li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-12">
-                             <div class="form-01 register_form-01">
-                                 <div class="input_form input-group">
-                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                     <input type="text" name="your-email" value="" size="100%" aria-required="true" aria-invalid="false" placeholder=" User Name ">
-                                 </div>
-                             </div>
-                         </div>
+<script> // Events slider
+     $(document).ready(function() {
+        $("#content-slider_ourTeam").lightSlider({
+            loop:true,
+            item:4,
+            keyPress:true,
+            controls:false,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                        item:1,
+                        slideMove:1,
+                        slideMargin:6,
+                      }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        item:1,
+                        slideMove:1
+                      }
+                }
+            ]
+        });
 
-                         <div class="col-md-12">
-                             <div class="form-01 register_form-01">
-                                 <div class="input_form input-group">
-                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                     <input type="text" name="Subject" value="" size="100%" aria-required="true" aria-invalid="false" placeholder=" Your Password ">
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-12">
-                             <div class="submit_btn">
-                                 <button type="button" class="btn btn-primary"> Login </button>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-   </div>
- </div>
-</div>
-</div>
+    });
+</script>
+<script> // Testimonials slider
+     $(document).ready(function() {
+        $("#content-slider_testimonials").lightSlider({
+            loop:true,
+            item:3,
+            keyPress:true,
+            controls:false,
+            pager: false,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                        item:1,
+                        slideMove:1,
+                        slideMargin:6,
+                      }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        item:1,
+                        slideMove:1
+                      }
+                }
+            ]
+        });
 
-<!-- Register-Modal -->
-<div class="modal fade" id="register-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
- <div class="modal-content">
-   <div class="modal-header">
-     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     <h4 class="modal-title" id="myModalLabel"> Create an Account </h4>
-   </div>
-   <div class="modal-body">
-     <div class="row">
-         <div class="col-md-12">
-                 <div class="all_form sign-register-form">
-                     <div class="row">
-                         <div class="col-md-12">
-                             <div class="form-01 register_form-01">
-                                 <div class="input_form input-group">
-                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                     <input type="text" name="your-name" value="" size="100%" aria-required="true" aria-invalid="false" placeholder=" Your Name ">
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-12">
-                             <div class="form-01 register_form-01">
-                                 <div class="input_form input-group">
-                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                     <input type="text" name="Subject" value="" size="100%" aria-required="true" aria-invalid="false" placeholder=" Your Email ">
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-12">
-                             <div class="form-01 register_form-01">
-                                 <div class="input_form input-group">
-                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                     <input type="text" name="Subject" value="" size="100%" aria-required="true" aria-invalid="false" placeholder=" Your Password ">
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-12">
-                             <div class="form-01 register_form-01">
-                                 <div class="input_form input-group">
-                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                     <input type="text" name="Subject" value="" size="100%" aria-required="true" aria-invalid="false" placeholder=" Confirm Your Password ">
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-md-12">
-                             <div class="submit_btn">
-                                 <button type="button" class="btn btn-primary"> Login </button>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-   </div>
- </div>
-</div>
-</div>
+    });
+</script>
+
+<!-- Countdown => In Home Page START -->
+<script>
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+
+</script>
+<!-- Countdown => In Home Page END -->
+<!-- Gallery => In gallery Page START -->
+<script src="{{url('public')}}/frontEnd/En/js/jquery.tools.min.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/jquery.mobile.custom.min.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/jquery.cm-overlay.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.cm-overlay').cmOverlay();
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Gallery => In gallery Page END -->
+
+<!-- Category Filter => In Home Page START -->
+    <script src="{{url('public')}}/frontEnd/En/js/Category-Filter/jquery.shuffle.min.js"></script>
+    <script src="{{url('public')}}/frontEnd/En/js/Category-Filter/category_filter.js"></script>
+<!-- Category Filter => In Home Page END -->
+<!-- Editor => In Profile Page START -->
+    <script src="{{url('public')}}/frontEnd/En/js/editor.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#txtEditor").Editor();
+        });
+    </script>
+<!-- Editor => In Profile Page END -->
+<!-- Videos page scripts  : start -->
+<script src="{{url('public')}}/frontEnd/En/js/popup/jquery.colorbox.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390, });
+    });
+</script>
+<script>
+    var cboxOptions = {
+  width: '95%',
+  height: '50%',
+  maxWidth: '960px',
+  maxHeight: '960px',
+}
+
+$('.youtube').colorbox(cboxOptions);
+
+$(window).resize(function(){
+    $.colorbox.resize({
+      width: window.innerWidth > parseInt(cboxOptions.maxWidth) ? cboxOptions.maxWidth : cboxOptions.width,
+      height: window.innerHeight > parseInt(cboxOptions.maxHeight) ? cboxOptions.maxHeight : cboxOptions.height
+    });
+});
+//    jQuery(document).ready(function(){
+//
+//	jQuery(".youtube").colorbox({
+//            inline:true,
+//	    maxWidth: "90%",
+//            onComplete : function() {
+//                jQuery(this).colorbox.resize();
+//            }
+//        });
+//
+//        // resize colorbox on screen rotate in mobile devices and set to cover 90% of screen
+//        jQuery(window).resize(function() {
+//            jQuery.colorbox.resize({width:"90%"});
+//        });
+//    });
+</script>
+<!-- Videos page scripts : end -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

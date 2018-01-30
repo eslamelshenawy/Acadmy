@@ -1,5 +1,5 @@
-<script src="{{url('public')}}/frontEnd/AR/js/jquery-1.11.3.min.js"></script>	
-<script src="{{url('public')}}/frontEnd/AR/js/bootstrap.min.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/jquery-1.11.3.min.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/bootstrap.min.js"></script>
 <!--Script Navbar fixed : START-->
 <script>
 $(window).scroll(function() {
@@ -12,7 +12,7 @@ $(window).scroll(function() {
 </script>
 <!--Script Navbar fixed : END-->
 <!--  Slider = " Home Page "  START  -->
-<script src="{{url('public')}}/frontEnd/AR/js/lightslider.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/lightslider.js"></script>
 <script> // Frist slider
      $(document).ready(function() {
         $("#content-slider_main_slider").lightSlider({
@@ -181,9 +181,9 @@ initializeClock('clockdiv', deadline);
 </script>
 <!-- Countdown => In Home Page END -->
 <!-- Gallery => In gallery Page START -->
-<script src="{{url('public')}}/frontEnd/AR/js/jquery.tools.min.js"></script>
-<script src="{{url('public')}}/frontEnd/AR/js/jquery.mobile.custom.min.js"></script>
-<script src="{{url('public')}}/frontEnd/AR/js/jquery.cm-overlay.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/jquery.tools.min.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/jquery.mobile.custom.min.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/jquery.cm-overlay.js"></script>
 <script>
     $(document).ready(function(){
         $('.cm-overlay').cmOverlay();
@@ -206,11 +206,11 @@ initializeClock('clockdiv', deadline);
 <!-- Gallery => In gallery Page END -->
 
 <!-- Category Filter => In Home Page START -->
-    <script src="{{url('public')}}/frontEnd/AR/js/Category-Filter/jquery.shuffle.min.js"></script>
-    <script src="{{url('public')}}/frontEnd/AR/js/Category-Filter/category_filter.js"></script>
+    <script src="{{url('public')}}/frontEnd/En/js/Category-Filter/jquery.shuffle.min.js"></script>
+    <script src="{{url('public')}}/frontEnd/En/js/Category-Filter/category_filter.js"></script>
 <!-- Category Filter => In Home Page END -->
 <!-- Editor => In Profile Page START -->
-    <script src="{{url('public')}}/frontEnd/AR/js/editor.js"></script>
+    <script src="{{url('public')}}/frontEnd/En/js/editor.js"></script>
     <script>
         $(document).ready(function() {
             $("#txtEditor").Editor();
@@ -218,7 +218,7 @@ initializeClock('clockdiv', deadline);
     </script>
 <!-- Editor => In Profile Page END -->
 <!-- Videos page scripts  : start -->
-<script src="{{url('public')}}/frontEnd/AR/js/popup/jquery.colorbox.js"></script>
+<script src="{{url('public')}}/frontEnd/En/js/popup/jquery.colorbox.js"></script>
 <script>
     $(document).ready(function(){
         $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390, });

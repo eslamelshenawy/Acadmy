@@ -12,10 +12,24 @@
 | WEBSITE:      http://www.arabnewtech.com
 | -----------------------------------------------------
 */
-
+/*  */
+.upcoming {
+    background: #1DABB8;
+    color: #f3f3f3;
+}
+.event_status {
+    position: absolute;
+    padding: 4px 10px;
+    top: 25px;
+}
+p {
+    margin-bottom: 0;
+    padding: 5px;
+}
+/* End  */
 @font-face {
     font-family: jf-flat-regular;
-    src: url("../fonts/jf-flat-regular.ttf")  
+    src: url("../fonts/jf-flat-regular.ttf")
 }
 /** My Custom Style start **/
 body{
@@ -189,7 +203,7 @@ header{
 .modal-header .close {
     margin-top: -2px;
     color: #fff;
-    opacity: 1; 
+    opacity: 1;
     font-size: 30px;
 }
 .modal-body {
@@ -220,7 +234,7 @@ header{
     padding: 0px !important;
 }
 .sign-register-form .input-group-addon{
-    border-color: transparent !important;   
+    border-color: transparent !important;
 }
 .sign-register-form .input-group-addon .fa{
     color: #adadad !important;
@@ -255,10 +269,10 @@ header{
     padding: 0px;
     /* font-weight: 800; */
     font-size: 35px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .main_sliderText .sliderText_00 h3 span{
-    color: #ffac30;    
+    color: #ffac30;
 }
 .main_sliderText .sliderText_00 p{
     color: #fff;
@@ -275,7 +289,7 @@ header{
     z-index: 0;
 }
 #content-slider_main_slider{
-    height: 500px !important; 
+    height: 500px !important;
 }
 #content-slider_main_slider img{
     width: 100%;
@@ -297,7 +311,112 @@ header{
 }
 /** Slider end **/
 
+/* // - START : Social Media Fixed List - // */
+.social_media_list ul{
+    float: left;
+    position: fixed;
+    z-index: 100;
+    bottom: 50%;
+}
+.social_media_list ul li a{
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 16px;
+    color: #fff;
+}
+.social_media_list ul li a:hover{
+      width: 55px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
+}
+.social_media_list .fb{
+    background: #3b5999;
+}
+.social_media_list .tw{
+     background: #55acee;
+}
+.social_media_list .gb{
+     background: #dd4b39;
+}
+.social_media_list .in{
+     background: #0077B5;
+}
+.social_media_list .ytube{
+     background: #cd201f;
+}
 
+/* button to see all */
+.main-sec_button {
+    margin: auto;
+    display: table;
+    padding: 10px 57px;
+    border-radius: 7px;
+    background: #56bcdb;
+    color: #fff;
+}
+
+/* // - START : Social Media Fixed List - // */
+
+/* // - START : Navbar Fixed - // */
+.logoImg_fixed {
+    display: none;
+}
+.fixed-me{
+    padding: 0px  !important;
+    position: fixed;
+    top:0;
+    left: 0;
+	z-index:9999999;
+/*    width: 100%;*/
+        box-shadow: 0px 3px 20px 0px rgba(93, 93, 93, 0.45);
+/*    border-bottom: 3px solid #1080c0 !important;*/
+    transition: all .5s !important;
+
+}
+.fixed-me .logoImg {
+    display: none;
+}
+.fixed-me .logoImg_fixed {
+    display: block;
+    float: left;
+    display: block;
+    position: relative;
+    z-index: 999999;
+}
+.fixed-me .navbar-nav {
+/*padding-left: 100px;*/
+}
+
+.fixed-me{
+/*        top: -16px;*/
+}
+.navbar-me {
+/*   transition: all 5s ;*/
+}
+.navbar-nav .dropdown-menu li a {
+    background: #08a8d9;
+    color: #fff;
+}
+.navbar-nav .dropdown-menu li{
+    margin: 5px 0;
+}
+/* // - START : Navbar Fixed - // */
+.navbar-nav .dropdown-menu li a{
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.navbar-nav .dropdown-menu{
+    padding: 0px 0;
+}
+.navbar-nav .dropdown-menu li a:hover{
+    background: #21b7e4;
+    border-color: #21b7e4;
+    color: #fff;
+}
 
 
 /* START ( Footer )  :: SECTION IN HOME PAGE */
@@ -659,7 +778,7 @@ header{
     color: #0099c8;
 }
 .p_details{
-    margin-top: 10px; 
+    margin-top: 10px;
     font-size: 14px;
 }
 .p_name{
@@ -931,7 +1050,7 @@ border-color: #1ac2ea;
 .contactForm .input-group-addon {
 border: 0px;
 padding: 6px 16px;
-} 
+}
 .contactForm .input-group-addon .fa {
 color: rgb(173, 173, 173);
 }
@@ -1160,7 +1279,7 @@ border: 1px solid#14c7f2;
 .share_01 ul .twitter{
     border: 1px solid#55acee;
 }
-.share_01 ul .twitter a{ 
+.share_01 ul .twitter a{
     color: #55acee;
 }
 .share_01 ul .twitter:hover{
@@ -1171,7 +1290,7 @@ border: 1px solid#14c7f2;
 .share_01 ul .google-plus{
     border: 1px solid#dd4b39;
     color: #dd4b39;
-}.share_01 ul .google-plus a{ 
+}.share_01 ul .google-plus a{
     color: #dd4b39;
 }
 .share_01 ul .google-plus:hover{
@@ -1290,22 +1409,22 @@ p.user_name{
 }
 .inbox-info0 .tab-pane .list-group .checkbox {
     display: inline-block;
-    margin: 0px; 
+    margin: 0px;
 }
-.inbox-info0 .inbox-info0 .tab-pane .list-group input[type="checkbox"]{ 
-    margin-top: 2px; 
+.inbox-info0 .inbox-info0 .tab-pane .list-group input[type="checkbox"]{
+    margin-top: 2px;
 }
 .inbox-info0 .tab-pane .list-group .glyphicon {
     margin-right:5px;
 }
-.inbox-info0 .tab-pane .list-group .glyphicon:hover { 
+.inbox-info0 .tab-pane .list-group .glyphicon:hover {
     color:#FFBC00;
 }
 .inbox-info0 a.list-group-item.read {
     color: #222;
     background-color: #F3F3F3;
 }
-.inbox-info0 hr { 
+.inbox-info0 hr {
     margin-top: 5px;
     margin-bottom: 10px;
 }
