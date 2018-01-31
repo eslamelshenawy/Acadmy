@@ -99,7 +99,8 @@ return [
     'WHAT_PEOPLE_SAY' => 'WHAT PEOPLE SAY',
     'arabic_name' => 'arabic name',
     'english_name' => 'english name',
-
+    'Why_Academy' => 'Why Academy',
+    'contactus' => 'Thanks for contacting us!',
 
     // General
     'logout' => 'Logout',

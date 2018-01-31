@@ -97,7 +97,8 @@ return [
     'WHAT_PEOPLE_SAY' => 'ماذا قالوا عنا',
     'arabic_name' => 'الاسم  باللغه العربيه',
     'english_name' => 'الاسم بالانجليزيه',
-
+    'Why_Academy' => 'لماذا الاكاديميه',
+    'contactus' => 'شكرا لك على اتصالك بنا !',
     // General
     'logout' => 'خروج',
     'checkAll' => 'تحديد الكل',

@@ -1,5 +1,6 @@
 <?php
   $tests = App\Helpers\Helper::GeneralSiteSetting(1)->get();
+  $links= App\Setting::where('id','=','1')->get();
  ?>
 
 <header>
@@ -76,12 +77,12 @@
                         <div class="collapse navbar-collapse" id="myNavbar">
                           <ul class="nav navbar-nav">
                             <li class="active"><a href="{{url('/')}}">{{trans('backLang.home')}}</a></li>
-                            <li><a href="courses.php">{{trans('backLang.Courses')}}</a></li>
-                            <li><a href="scholarships.php">{{trans('backLang.Scholarships')}}</a></li>
-                            <li><a href="portfolio.php">{{trans('backLang.Portfolio')}}</a></li>
-                            <li><a href="about.php">{{trans('backLang.About_Us')}}</a></li>
-                            <li><a href="contact.php">{{trans('backLang.Contact_Us')}}</a></li>
-                            <li><a href="blog.php">{{trans('backLang.Blog')}}</a></li>
+                            <li><a href="{{url('courses/academy')}}">{{trans('backLang.Courses')}}</a></li>
+                            <li><a href="{{url('Scholarships/academy')}}">{{trans('backLang.Scholarships')}}</a></li>
+                            <li><a href="{{url('Portfolio/academy')}}">{{trans('backLang.Portfolio')}}</a></li>
+                            <li><a href="{{url('about')}}">{{trans('backLang.About_Us')}}</a></li>
+                            <li><a href="{{url('contactus')}}">{{trans('backLang.Contact_Us')}}</a></li>
+                            <li><a href="{{url('news')}}">{{trans('backLang.Blog')}}</a></li>
                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">{{trans('backLang.Other_Pages')}}  <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                   <li><a href="content_details.php">{{trans('backLang.Content_Details')}} </a></li>
@@ -102,21 +103,23 @@
 <!--  Social Media List START  -->
 <div class="social_media_list">
     <ul>
+      @foreach($links as $link)
         <li class="facebook">
-            <a target="_blank" href="#" class="fb"><i class="fa fa-facebook "></i></a>
+            <a target="_blank" href="{{$link->social_link1}}" class="fb"><i class="fa fa-facebook "></i></a>
         </li>
         <li class="twitter">
-            <a target="_blank" href="#" class="tw"><i class="fa fa-twitter "></i></a>
+            <a target="_blank" href="{{$link->social_link2}}" class="tw"><i class="fa fa-twitter "></i></a>
         </li>
         <li class="google-plus">
-            <a target="_blank" href="#" class="gb"><i class="fa fa-google-plus "></i></a>
+            <a target="_blank" href="{{$link->social_link3}}" class="gb"><i class="fa fa-google-plus "></i></a>
         </li>
         <li class="linkedin">
-            <a target="_blank" href="#" class="in"><i class="fa fa-linkedin "></i></a>
+            <a target="_blank" href="{{$link->social_link4}}" class="in"><i class="fa fa-linkedin "></i></a>
         </li>
         <li class="youtube cboxElement">
-            <a target="_blank" href="#" class="ytube"><i class="fa fa-youtube-play "></i></a>
+            <a target="_blank" href="{{$link->social_link5}}" class="ytube"><i class="fa fa-youtube-play "></i></a>
         </li>
+        @endforeach
     </ul>
 </div>
 <!--  Social Media List END  -->

@@ -1187,4 +1187,10 @@ class FrontendHomeController extends Controller
         return "OK";
     }
 
+
+
+
+
+
+
 }

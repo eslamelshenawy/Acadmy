@@ -11,13 +11,20 @@
 |
 */
 //
-Route::get('test',function(){
- $dt = Carbon\Carbon::now();
-  $test = App\Topic::where('webmaster_id','=','13')->where('expire_date','>=',$dt)->get();
-  // $Setting = App\Setting::find(1);
-  dd($test);
-  return $Setting;
-});
+
+// bage of courses
+Route::get('courses/academy', 'AcademyController@course_acadmy');
+//bage of Scholarships
+Route::get('Scholarships/academy', 'AcademyController@Scholarships_acadmy');
+//bage of Portfolio
+Route::get('Portfolio/academy', 'AcademyController@Portfolio_acadmy');
+//bage of Portfolio
+Route::get('about', 'AcademyController@about_acadmy');
+//bage of Portfolio
+Route::get('news', 'AcademyController@news_acadmy');
+//bage of contact us
+Route::get('contactus', 'AcademyController@contacts_acadmy');
+Route::post('contactus/save', 'AcademyController@save_contacts_acadmy');
 
 // Language Route
 Route::post('/lang', array(
@@ -52,12 +59,6 @@ Route::Group(['prefix' => env('BACKEND_PATH')], function () {
         return view('errors.404');
     })->name('NotFound');
 
-// category of courses
-Route::get('Courses', 'WebmasterSectionsController@courses')->name('WebmasterSections');
-Route::get('create/Courses', 'WebmasterSectionsController@create_courses')->name('WebmasterSections');
-Route::post('store/Courses', 'WebmasterSectionsController@store_courses')->name('WebmasterSections');
-Route::get('edit/Courses/{id}', 'WebmasterSectionsController@edit_courses')->name('WebmasterSections');
-Route::get('delete/Courses/{id}', 'WebmasterSectionsController@delete_courses')->name('WebmasterSections');
 
 
 //category of books
